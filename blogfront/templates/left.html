@@ -1,0 +1,112 @@
+{% extends 'base_main.html' %}
+
+
+{# 关于我 #}
+{% block about_me %}
+    <div class="about_me">
+        <h2>关于我</h2>
+        <ul>
+          <i><img src="/static/images/4.jpg"></i>
+          <p><b>杨青</b>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
+        </ul>
+    </div>
+{% endblock %}
+
+{# 我的相册 #}
+{% block wdxc %}
+    <div class="wdxc">
+        <h2>我的相册</h2>
+        <ul>
+          <li><a href=""><img src="/static/images/7.jpg"></a></li>
+          <li><a href=""><img src="/static/images/8.jpg"></a></li>
+          <li><a href=""><img src="/static/images/9.jpg"></a></li>
+          <li><a href=""><img src="/static/images/10.jpg"></a></li>
+          <li><a href=""><img src="/static/images/11.jpg"></a></li>
+          <li><a href=""><img src="/static/images/12.jpg"></a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{# 搜索 #}
+{% block search %}
+    <div class="search">
+        <form action="" method="post" name="searchform" id="searchform">
+          <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+          <input name="show" value="title" type="hidden">
+          <input name="tempid" value="1" type="hidden">
+          <input name="tbname" value="news" type="hidden">
+          <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+    </div>
+{% endblock %}
+
+{# 文章分类 #}
+{% block fenlei %}
+    <div class="fenlei">
+        <h2>文章分类</h2>
+        <ul>
+          {% for clas in request.classify %}
+              <li><a href="">{{ clas.1 }} ({{ clas.2 }})</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{# 站长推荐 #}
+{% block tuijian %}
+    <div class="tuijian">
+        <h2>站长推荐</h2>
+        <ul>
+          {% for recom in request.recommend %}
+              <li><a href="">{{ recom.title }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{# 点击排行 #}
+{% block click_rank %}
+    <div class="tuijian">
+        <h2>点击排行</h2>
+        <ul>
+            <li><a href="/">你是什么人便会遇上什么人</a></li>
+            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+            <li><a href="/">你是什么人便会遇上什么人</a></li>
+            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{# 友情链接 #}
+{% block links %}
+    <div class="links">
+        <h2>友情链接</h2>
+        <ul>
+          <a href="http://www.yangqq.com">杨青个人博客</a> <a href="http://www.yangqq.com">杨青博客</a>
+        </ul>
+    </div>
+{% endblock %}
+
+{# 云标签 #}
+{% block cloud %}
+    <div class="cloud">
+        <h2>标签云</h2>
+        <ul>
+            <a href="/">陌上花开</a> <a href="/">校园生活</a> <a href="/">html5</a> <a href="/">SumSung</a> <a href="/">青春</a> <a href="/">温暖</a> <a href="/">阳光</a> <a href="/">三星</a><a href="/">索尼</a> <a href="/">华维荣耀</a> <a href="/">三星</a> <a href="/">索尼</a>
+        </ul>
+    </div>
+{% endblock %}
+
+{# 关注我 #}
+{% block guanzhu %}
+    <div class="guanzhu">
+        <h2>关注我</h2>
+        <ul>
+          <img src="/media/upload/wx.jpg">
+        </ul>
+    </div>
+{% endblock %}

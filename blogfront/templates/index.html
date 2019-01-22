@@ -1,0 +1,24 @@
+{% extends 'left.html' %}
+
+
+{# 点击排行 #}
+{% block click_rank %}
+{% endblock %}
+
+
+{# 云标签 #}
+{% block cloud %}
+{% endblock %}
+
+
+{% block content %}
+    <main class="r_box">
+        {% for msg in msgs %}
+            <li><i><a href=""><img src="/media/{{ msg.titlepic }}"></a></i>
+              <h3><a href="">{{ msg.title | safe }}</a></h3>
+              <p>{{ msg.content }}</p>
+            </li>
+        {% endfor %}
+        </main>
+    </article>
+{% endblock %}

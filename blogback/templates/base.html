@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    {% block css %}
+    {% endblock %}
+
+    {% block icon %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+
+</head>
+<body class="user-select">
+    <section class="container-fluid">
+        {% block head %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+    </section>
+    
+    <!--个人信息模态框-->
+    {% block personal_information %}
+    {% endblock %}
+    
+    <!--个人登录记录模态框-->
+    {% block personal_record %}
+    {% endblock %}
+    
+    <!--微信二维码模态框-->
+    {% block wechat %}
+    {% endblock %}
+    
+    <!--提示模态框-->
+    {% block hint %}
+    {% endblock %}
+    
+    <!--右键菜单列表-->
+    {% block footer %}
+    {% endblock %}
+
+    {% block js2 %}
+    {% endblock %}
+</body>
+</html>

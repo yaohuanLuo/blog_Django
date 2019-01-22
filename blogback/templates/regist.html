@@ -1,0 +1,15 @@
+{% extends 'base_main.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>用户名：<input type="text" name="user">{{ msg1 }}</p>
+        <p>&emsp;密码：<input type="password" name="password"></p>
+        <p>确认码：<input type="password" name="password2">{{ msg2 }}</p>
+        <input type="submit" value="提交">
+    </form>
+{% endblock %}

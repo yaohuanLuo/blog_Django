@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页_LYH个人博客</title>
+{#    <meta name="keywords" content="个人博客,LYH个人博客" />#}
+{#    <meta name="description" content="个人学习博客，欢迎大家沟通交流" />#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0">#}
+
+    {% block css %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+    <article>
+        {# 左边栏目 #}
+        <aside class="l_box">
+
+            {# 关于我 #}
+            {% block about_me %}
+            {% endblock %}
+
+            {# 我的相册 #}
+            {% block wdxc %}
+            {% endblock %}
+
+            {# 搜索 #}
+            {% block search %}
+            {% endblock %}
+
+            {# 文章分类 #}
+            {% block fenlei %}
+            {% endblock %}
+
+            {# 站长推荐 #}
+            {% block tuijian %}
+            {% endblock %}
+
+            {# 点击排行 #}
+            {% block click_rank %}
+            {% endblock %}
+
+            {# 友情链接 #}
+            {% block links %}
+            {% endblock %}
+
+            {# 云标签 #}
+            {% block cloud %}
+            {% endblock %}
+
+            {# 关注我 #}
+            {% block guanzhu %}
+            {% endblock %}
+
+    </aside>
+
+        {% block content %}
+        {% endblock %}
+
+    </article>
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block js2 %}
+    {% endblock %}
+</body>
+</html>
